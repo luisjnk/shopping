@@ -1,9 +1,10 @@
 import React from 'react';
+import ProductCard from '../../components/ProductCard/ProductCard';
 
 function ProductList() {
   return (
     <div >
-        <h1> AQUI </h1>
+        <ProductCard />
     </div>
   );
 }
