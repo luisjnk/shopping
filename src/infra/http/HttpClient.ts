@@ -1,5 +1,3 @@
-import { rejects } from "assert"
-
 interface IHttpClient {
   get(url: string): Promise<Object>
 }
