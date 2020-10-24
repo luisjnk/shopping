@@ -1,5 +1,5 @@
 interface IHttpClient {
-  get(url: string): Promise<Object>
+  get(url: string): Promise<Array<any>>
 }
 
 const PROTOCOLS = {
@@ -12,7 +12,7 @@ const HttpClient = (): IHttpClient => {
     method: portocol
   })
 
-  const get = async (url: string): Promise<Object> => {
+  const get = async (url: string): Promise<Array<any>> => {
     return new Promise(async (resolve, reject) => {
       const config = constructConfig(PROTOCOLS.GET)
       const res = await fetch(url, config);
