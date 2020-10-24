@@ -7,10 +7,10 @@ import ProductList from "../ProductList/ProductList";
 
 export default function RouterSwitch() {
   return (
-        <Switch>
-          <Route path="/products">
-            <ProductList />
-          </Route>
-        </Switch>
+    <Switch>
+      <Route path="/products">
+        <ProductList />
+      </Route>
+    </Switch>
   );
 }
