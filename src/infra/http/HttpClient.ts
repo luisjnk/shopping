@@ -19,7 +19,6 @@ const HttpClient = (): IHttpClient => {
       if (res.status >= 400) {
         throw new Error("Error when findTrendingUsers");
       }
-  
       resolve( await res.json());
     })
   }

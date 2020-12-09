@@ -9,12 +9,18 @@ function NavBar() {
     <div className="header">
       <div className="logo"> logo </div>
       <div className="menu-wrapp">
-        <div className="header-menu">
-          <Link to="/products">
-             <label> Products </label>
-          </Link>
-          <label> Cart </label>
-        </div>
+        <ul className="header-menu">
+          <li>
+            <Link to="/products">
+              <label> Products </label>
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <label> Cart </label>
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );

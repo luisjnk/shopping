@@ -9,25 +9,31 @@ const INITIAL_STATE: Array<IProduct> = []
 
 function ProductList() {
   const [products, setProducts] = useState(INITIAL_STATE as Array<IProduct>)
-  const { getProducts } = productService()
 
   useEffect(() => {
-    getProducts()
-      .then((res) => {
-        setProducts(res)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+    const { getProducts } = productService()
+    const initializeComponent = () => {
+      getProducts()
+        .then((res) => {
+          setProducts(_ => res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
+    initializeComponent()
   }, []);
 
   return (
-    <div >
-      <div className={"card-container"}>  {products.map(product => {
-        return <ProductCard image={product.image} name={product.productName} price={product.price}/>
-      })} </div>
+    <div className={"card-container"}>
+      {products.map(product => {
+        return <ProductCard key={product.id} image={product.imageUrl} name={product.name} price={product.price} />
+      })}
     </div>
   );
 }
 
 export default ProductList;
+/*{products.map(product => {
+        return <ProductCard image={product.image} name={product.productName} price={product.price}/>
+      })} */
