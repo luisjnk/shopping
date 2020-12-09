@@ -5,12 +5,15 @@ import {
 } from "react-router-dom";
 import RouterSwitch from '../Router/Router';
 
+import "./Home.scss"
 function Home() {
   return (
     <div className="App">
       <Router>
         <NavBar />
-        <RouterSwitch />
+         <div className="app-container">
+           <RouterSwitch />
+         </div>
       </Router>
     </div>
   );
