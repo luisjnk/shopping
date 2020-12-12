@@ -11,8 +11,6 @@ function Summary({ productList } : Props) {
       return acc + parseFloat(product.price)
     }, 0)
   }
-
-
   return (
     <div className="summary">
       <div className="bag-summary">
