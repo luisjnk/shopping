@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useContext, useState } from 'react';
 import BagsList from '../../components/BagList/BagList';
 import Summary from '../../components/Summary/Summary';
