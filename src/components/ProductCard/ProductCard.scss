@@ -12,4 +12,13 @@
   
   .container {
     padding: 2px 16px;
+
+    button {
+      border-radius: 10rem;
+      color: white;
+      width: 6rem;
+      height: 2rem;
+      background-color: black;
+      cursor: pointer;
+    }
   }
