@@ -6,9 +6,13 @@ import BagIcon from './BagSvg/BagSVG';
 import "./NavBar.scss"
 import SearchSVG from './Search-svg/SearchSvg';
 
-function NavBar() {
+interface Props {
+  countOfItem: number
+}
+
+function NavBar({countOfItem}: Props) {
   return (
-    <div className="header">
+    <div className="header sticky">
       <div className="logo"> logo </div>
       <div className="menu-wrapp">
         <ul className="header-menu">
@@ -45,7 +49,7 @@ function NavBar() {
         </ul>
         <div className="pre-search-container">
           <Link to="/bag">
-            <BagIcon />
+            <BagIcon countOfItem={countOfItem} />
           </Link>
         </div>
       </div>
