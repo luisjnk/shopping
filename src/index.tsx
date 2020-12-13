@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ShoppingBagContextProvider } from './context/shoppingBag-context';
 import Home from './pages/Home/Home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <ShoppingBagContextProvider>
+      <Home />
+    </ShoppingBagContextProvider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
